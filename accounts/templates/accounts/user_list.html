@@ -1,0 +1,26 @@
+{% extends 'accounts/base.html' %}
+
+
+
+{% block content %}
+    <div class="header">
+        <h2>All Users ({{ users.count }})</h2>
+        <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+    </div>
+    
+    <div class="user-grid">
+        {% for user in users %}
+        <div class="user-card">
+            <img src="{{ user.profile.profile_picture.url }}" alt="{{ user.username }}" class="user-img">
+            <h3>{{ user.username }}</h3>
+            {% if user.first_name or user.last_name %}
+                <p>{{ user.first_name }} {{ user.last_name }}</p>
+            {% endif %}
+            {% if user.profile.location %}
+                <p>📍 {{ user.profile.location }}</p>
+            {% endif %}
+            <a href="{% url 'view_user_profile' user.username %}" class="view-profile">View Profile</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}

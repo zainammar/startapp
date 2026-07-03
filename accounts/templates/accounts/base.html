@@ -1,0 +1,52 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</body>
+    <title>Signup</title>
+
+    
+</head>
+<body>
+    <div class="row-1 content-grid">
+        <div class="grid-item-1 center-content">
+            <h1>Signup</h1>
+            <p>Welcome to Signup</p>
+        
+            
+        </div>
+    </div>
+    <div class="row-6 content-grid">
+        <div class="grid-item-1">   <img src="{{ user.profile.profile_picture.url }}" alt="Profile Picture" class="profile-img"> </div>
+        <div class="grid-item-1">   </div>
+        <div class="grid-item-1">  </div>
+            <div class="profile-preview">
+        
+       
+        
+                <p>You are successfully logged in.</p>
+           
+        </div>
+        </div>
+        <div class="grid-item-1">
+            <h2>Toggle Dark/Light Mode</h2>
+            <button onclick="myFunction()">🌙 Dark Mode</button>
+
+               <script>
+               function myFunction() {
+                  var element = document.body;
+                  element.classList.toggle("dark-mode");
+               }
+               </script>
+               
+        </div>
+    </div>
+    
+
+<hr>
+<div>
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

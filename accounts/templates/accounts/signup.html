@@ -1,0 +1,27 @@
+{% extends 'accounts/base.html' %}
+
+
+
+{% block content %}
+<div class="row-6 content-grid">
+    <div class="grid-item-1">
+
+        <h2 class="heading-two">Create your account</h2>
+    </div>
+    <div class="grid-item-1">
+        <h1>Sign Up</h1>
+        </div>
+    <div class="grid-item-1">
+    
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+   
+    <div class="hr-1"></div>
+
+    {% endblock %}
