@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}Receive Payment{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+
+            <h4 class="mb-0">Receive Payment</h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label>Invoice</label>
+                        {{ form.invoice }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Payment Method</label>
+                        {{ form.payment_method }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Amount</label>
+                        {{ form.amount }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Payment Date</label>
+                        {{ form.payment_date }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Reference No</label>
+                        {{ form.reference_no }}
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <label>Remarks</label>
+                        {{ form.remarks }}
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-save"></i> Save Payment
+                </button>
+
+                <a href="#" class="btn btn-secondary">
+                    Cancel
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='/home/tnt/Downloads/Django-Projects/final/Starter Base Static CSS/env'
+VIRTUAL_ENV='/home/tnt/Downloads/Django-Projects/final/Tajir Asani/env'
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
